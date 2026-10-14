@@ -9,10 +9,10 @@ interface Props {
 const { item } = Astro.props;
 ---
 
-<article class="border-b border-latte py-5">
+<article class="menu-row border-b border-latte py-5">
   <div class="flex items-baseline justify-between gap-4">
     <h3 class="text-xl font-bold">{item.name}</h3>
-    <span class="font-semibold tabular-nums text-mocha">{formatPrice(item.price)}</span>
+    <span class="menu-price font-semibold tabular-nums text-mocha">{formatPrice(item.price)}</span>
   </div>
   <p class="mt-1 max-w-prose text-mocha">{item.description}</p>
 </article>

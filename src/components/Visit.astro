@@ -22,16 +22,16 @@ import { openingHours, site } from '../config/site';
         <h3 class="text-xl font-bold">Find us</h3>
         <p class="mt-5 text-mocha">{site.address}</p>
         <p class="mt-2">
-          <a href={`tel:${site.phone}`} class="hover:text-mocha">{site.phone}</a>
+          <a href={`tel:${site.phone}`} class="transition-colors hover:text-mocha">{site.phone}</a>
         </p>
         <p class="mt-1">
-          <a href={`mailto:${site.email}`} class="hover:text-mocha">{site.email}</a>
+          <a href={`mailto:${site.email}`} class="transition-colors hover:text-mocha">{site.email}</a>
         </p>
         <a
           href={`https://maps.google.com/?q=${encodeURIComponent(site.address)}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-8 inline-block rounded-full bg-espresso px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-mocha"
+          class="mt-8 inline-block press rounded-full bg-espresso px-6 py-3 text-sm font-medium text-cream hover:bg-mocha"
         >
           Get directions
         </a>

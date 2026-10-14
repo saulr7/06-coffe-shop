@@ -19,7 +19,7 @@ const groups = [...groupByCategory(menuItems)];
       {groups.map(([category]) => (
         <a
           href={`#${category}`}
-          class="rounded-full border border-latte bg-white/60 px-5 py-2 text-sm font-medium transition-colors hover:bg-latte"
+          class="press rounded-full border border-latte bg-white/60 px-5 py-2 text-sm font-medium hover:bg-latte"
         >
           {categoryLabels[category]}
         </a>
@@ -27,7 +27,7 @@ const groups = [...groupByCategory(menuItems)];
     </nav>
 
     {groups.map(([category, items]) => (
-      <section id={category} class="mt-14 scroll-mt-24">
+      <section id={category} class="menu-section mt-14 scroll-mt-24">
         <h2 class="text-2xl font-bold">{categoryLabels[category]}</h2>
         <div class="mt-4 grid gap-x-12 md:grid-cols-2">
           {items.map((item) => <MenuItemCard item={item} />)}

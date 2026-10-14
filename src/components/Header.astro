@@ -11,37 +11,42 @@ import { navLinks, site } from '../config/site';
 
       <nav class="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="Main">
         {navLinks.map((link) => (
-          <a href={link.href} class="transition-colors hover:text-mocha">{link.label}</a>
+          <a href={link.href} class="link-draw">{link.label}</a>
         ))}
       </nav>
     </div>
 
     <a
       href="/menu"
-      class="hidden rounded-full bg-espresso px-5 py-2 text-sm font-medium text-cream transition-colors hover:bg-mocha md:inline-block"
+      class="hidden rounded-full bg-espresso px-5 py-2 text-sm font-medium text-cream press hover:bg-mocha md:inline-block"
     >
       Order now
     </a>
 
     <button
       type="button"
-      class="md:hidden rounded-md p-2"
+      class="relative rounded-md p-2 md:hidden press"
       aria-label="Toggle menu"
       aria-expanded="false"
       data-nav-toggle
     >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
         <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+      <svg class="icon-close absolute inset-2" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18"></path>
       </svg>
     </button>
   </div>
 
-  <nav class="hidden border-t border-latte/70 px-6 py-4 md:hidden" aria-label="Mobile" data-nav-panel>
-    <ul class="flex flex-col gap-4 text-sm font-medium">
-      {navLinks.map((link) => (
-        <li><a href={link.href}>{link.label}</a></li>
-      ))}
-    </ul>
+  <nav class="border-t border-latte/70 md:hidden" aria-label="Mobile" data-nav-panel>
+    <div>
+      <ul class="flex flex-col gap-1 px-6 py-3 text-base font-medium">
+        {navLinks.map((link) => (
+          <li><a href={link.href} class="block py-2.5 transition-colors hover:text-mocha">{link.label}</a></li>
+        ))}
+      </ul>
+    </div>
   </nav>
 </header>
 

@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
       <p class="font-semibold text-cream">Explore</p>
       <ul class="mt-4 space-y-2 text-sm">
         {navLinks.map((link) => (
-          <li><a href={link.href} class="hover:text-cream">{link.label}</a></li>
+          <li><a href={link.href} class="transition-colors hover:text-cream">{link.label}</a></li>
         ))}
       </ul>
     </div>
@@ -21,8 +21,8 @@ const year = new Date().getFullYear();
       <p class="font-semibold text-cream">Contact</p>
       <ul class="mt-4 space-y-2 text-sm">
         <li>{site.address}</li>
-        <li><a href={`tel:${site.phone}`} class="hover:text-cream">{site.phone}</a></li>
-        <li><a href={`mailto:${site.email}`} class="hover:text-cream">{site.email}</a></li>
+        <li><a href={`tel:${site.phone}`} class="transition-colors hover:text-cream">{site.phone}</a></li>
+        <li><a href={`mailto:${site.email}`} class="transition-colors hover:text-cream">{site.email}</a></li>
         <li>{site.instagram}</li>
       </ul>
     </div>
