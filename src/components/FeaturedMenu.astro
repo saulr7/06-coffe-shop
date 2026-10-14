@@ -1,0 +1,21 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import MenuItemCard from './MenuItemCard.astro';
+import { featuredItems } from '../config/menu';
+---
+
+<section class="mx-auto max-w-6xl px-6 py-24">
+  <SectionHeading
+    eyebrow="Favorites"
+    title="What everyone orders"
+    description="Our most-loved drinks and bakes, made fresh every morning."
+  />
+  <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {featuredItems.map((item) => <MenuItemCard item={item} />)}
+  </div>
+  <div class="mt-12 text-center">
+    <a href="/menu" class="font-medium underline decoration-caramel decoration-2 underline-offset-4 hover:text-caramel">
+      View full menu →
+    </a>
+  </div>
+</section>

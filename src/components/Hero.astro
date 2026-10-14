@@ -1,0 +1,32 @@
+---
+import { site } from '../config/site';
+---
+
+<section class="relative overflow-hidden bg-espresso text-cream">
+  <div class="absolute -right-24 -top-24 size-96 rounded-full bg-caramel/20 blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-16 size-80 rounded-full bg-mocha/40 blur-3xl"></div>
+
+  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-32">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-widest text-caramel">Roasted in Portland</p>
+      <h1 class="mt-4 text-5xl font-bold leading-tight md:text-6xl">{site.tagline}</h1>
+      <p class="mt-6 max-w-md text-lg text-latte">
+        Single-origin beans, house-baked pastries and a corner table with your name on it.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="/menu" class="rounded-full bg-caramel px-7 py-3 font-medium text-espresso transition-colors hover:bg-latte">
+          See the menu
+        </a>
+        <a href="#visit" class="rounded-full border border-latte/40 px-7 py-3 font-medium transition-colors hover:bg-cream/10">
+          Visit us
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center" aria-hidden="true">
+      <div class="flex size-72 items-center justify-center rounded-full bg-gradient-to-br from-caramel to-mocha text-9xl shadow-2xl md:size-96 md:text-[10rem]">
+        ☕
+      </div>
+    </div>
+  </div>
+</section>

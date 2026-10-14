@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import MenuItemCard from '../components/MenuItemCard.astro';
+import { categoryLabels, menuItems } from '../config/menu';
+import { groupByCategory } from '../utils/menu';
+
+const groups = [...groupByCategory(menuItems)];
+---
+
+<BaseLayout title="Menu" description="Coffee, tea, pastries and bites at Ember & Bean.">
+  <div class="mx-auto max-w-6xl px-6 py-20">
+    <SectionHeading
+      eyebrow="The menu"
+      title="Everything we pour and bake"
+      description="Oat, almond and whole milk always available."
+    />
+
+    <nav class="mt-10 flex flex-wrap justify-center gap-3" aria-label="Menu categories">
+      {groups.map(([category]) => (
+        <a
+          href={`#${category}`}
+          class="rounded-full border border-latte bg-white/60 px-5 py-2 text-sm font-medium transition-colors hover:bg-latte"
+        >
+          {categoryLabels[category]}
+        </a>
+      ))}
+    </nav>
+
+    {groups.map(([category, items]) => (
+      <section id={category} class="mt-16 scroll-mt-24">
+        <h2 class="border-b border-latte pb-3 text-2xl font-bold">{categoryLabels[category]}</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((item) => <MenuItemCard item={item} />)}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { testimonials } from '../config/site';
+---
+
+<section class="mx-auto max-w-6xl px-6 py-24">
+  <SectionHeading eyebrow="Kind words" title="Loved by the neighborhood" />
+  <div class="mt-14 grid gap-6 md:grid-cols-3">
+    {testimonials.map((t) => (
+      <figure class="rounded-2xl bg-espresso p-8 text-cream">
+        <blockquote class="font-display text-lg leading-relaxed">“{t.quote}”</blockquote>
+        <figcaption class="mt-6 text-sm">
+          <span class="font-semibold">{t.author}</span>
+          <span class="block text-latte/80">{t.role}</span>
+        </figcaption>
+      </figure>
+    ))}
+  </div>
+</section>

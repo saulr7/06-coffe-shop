@@ -1,43 +1,55 @@
-# Astro Starter Kit: Minimal
+# Coffee Shop Landing Page
+
+A landing page for a coffee shop, built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) v4.
+
+## Tech Stack
+
+- Astro 7
+- Tailwind CSS 4 (via `@tailwindcss/vite`)
+- Node >= 22.12.0
+
+## Getting Started
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The dev server runs at `localhost:4321`.
 
-## 🚀 Project Structure
+## Commands
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm run build`           | Builds the production site to `./dist/`          |
+| `npm run preview`         | Previews the build locally, before deploying     |
+| `npm run astro ...`       | Runs CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Shows help for the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Project Structure
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```text
+/
+├── public/          Static assets (favicon, images)
+├── src/
+│   ├── pages/       Routes; each file becomes a page
+│   ├── components/  Reusable Astro components
+│   ├── layouts/     Page layouts
+│   ├── styles/      Global styles (global.css imports Tailwind)
+│   ├── scripts/     Client-side scripts
+│   ├── types/       Shared types
+│   ├── utils/       Helper functions
+│   └── config/      Site configuration
+└── package.json
+```
+
+Some of these folders are created as the project grows.
+
+## Learn More
+
+- [Astro documentation](https://docs.astro.build)
+- [Tailwind CSS documentation](https://tailwindcss.com/docs)
