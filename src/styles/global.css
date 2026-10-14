@@ -26,3 +26,21 @@
     @apply font-display;
   }
 }
+
+@layer base {
+  ::selection {
+    background: var(--color-caramel);
+    color: var(--color-espresso);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-caramel);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}

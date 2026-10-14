@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T00:00:00Z",
+  "title": "Design System: Ember & Bean",
+  "extensions": {
+    "colorMeta": {
+      "cream": {"role": "neutral", "displayName": "Warm Cream", "canonical": "#faf4ea", "tonalRamp": ["#3a3630","#5e5850","#8a8378","#b3ab9d","#d1c8b6","#e6dccb","#f2ebdd","#faf4ea"]},
+      "latte": {"role": "neutral", "displayName": "Latte Foam", "canonical": "#e9d8bd", "tonalRamp": ["#3b3122","#5f4f38","#87704f","#ae946a","#c9b085","#dac6a2","#e9d8bd","#f4ead9"]},
+      "caramel": {"role": "primary", "displayName": "Caramel Glow", "canonical": "#c68642", "tonalRamp": ["#3a230c","#5c3a14","#7f511c","#a06a2c","#c68642","#d6a066","#e5bd8f","#f2dcc0"]},
+      "mocha": {"role": "secondary", "displayName": "Mocha", "canonical": "#7a4a2b", "tonalRamp": ["#26170d","#3d2616","#573420","#7a4a2b","#966243","#b38163","#cfa88f","#e8d3c6"]},
+      "espresso": {"role": "primary", "displayName": "Espresso Brown", "canonical": "#2b1810", "tonalRamp": ["#120a06","#1d100a","#2b1810","#3f2a20","#5a4136","#7a6459","#a3918a","#d3c9c4"]}
+    },
+    "typographyMeta": {
+      "display": {"displayName": "Display", "purpose": "Hero tagline only."},
+      "headline": {"displayName": "Headline", "purpose": "Section titles."},
+      "title": {"displayName": "Title", "purpose": "Card titles and quotes."},
+      "body": {"displayName": "Body", "purpose": "Descriptions, hours, contact."},
+      "label": {"displayName": "Label", "purpose": "Uppercase caramel eyebrows."}
+    },
+    "shadows": [
+      {"name": "hover-lift", "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)", "purpose": "Menu card hover."},
+      {"name": "hero-medallion", "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)", "purpose": "Hero circular graphic."}
+    ],
+    "motion": [
+      {"name": "color-fade", "value": "color, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Hover on links and buttons."}
+    ],
+    "breakpoints": [
+      {"name": "sm", "value": "640px"},
+      {"name": "md", "value": "768px"},
+      {"name": "lg", "value": "1024px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button", "kind": "button", "refersTo": "button-primary",
+      "description": "Espresso pill for main actions such as directions and the nav CTA.",
+      "html": "<button class=\"ds-btn-primary\">Get directions</button>",
+      "css": ".ds-btn-primary{background:#2b1810;color:#faf4ea;padding:12px 24px;border:0;border-radius:9999px;font:500 14px Inter,system-ui,sans-serif;cursor:pointer;transition:background-color .15s}.ds-btn-primary:hover{background:#7a4a2b}.ds-btn-primary:focus-visible{outline:2px solid #c68642;outline-offset:2px}"
+    },
+    {
+      "name": "Hero Button", "kind": "button", "refersTo": "button-hero",
+      "description": "Caramel pill on the espresso hero.",
+      "html": "<div style=\"background:#2b1810;padding:20px\"><button class=\"ds-btn-hero\">See the menu</button></div>",
+      "css": ".ds-btn-hero{background:#c68642;color:#2b1810;padding:12px 28px;border:0;border-radius:9999px;font:500 16px Inter,system-ui,sans-serif;cursor:pointer;transition:background-color .15s}.ds-btn-hero:hover{background:#e9d8bd}.ds-btn-hero:focus-visible{outline:2px solid #faf4ea;outline-offset:2px}"
+    },
+    {
+      "name": "Category Chip", "kind": "chip", "refersTo": "category-chip",
+      "description": "Pill link for in-page menu categories.",
+      "html": "<a class=\"ds-chip\" href=\"#\">Pastries</a>",
+      "css": ".ds-chip{display:inline-block;border:1px solid #e9d8bd;background:rgba(255,255,255,.6);color:#2b1810;padding:8px 20px;border-radius:9999px;font:500 14px Inter,system-ui,sans-serif;text-decoration:none;transition:background-color .15s}.ds-chip:hover{background:#e9d8bd}.ds-chip:focus-visible{outline:2px solid #c68642;outline-offset:2px}"
+    },
+    {
+      "name": "Menu Item Card", "kind": "card", "refersTo": "menu-card",
+      "description": "Translucent card with an icon disc, name, price and description.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-disc\">☕</div><div class=\"ds-row\"><h3>Flat White</h3><span>$4.50</span></div><p>Double ristretto, steamed milk.</p></article>",
+      "css": ".ds-card{background:rgba(255,255,255,.6);border:1px solid #e9d8bd;border-radius:16px;padding:24px;color:#2b1810;font-family:Inter,system-ui,sans-serif;transition:box-shadow .15s}.ds-card:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}.ds-disc{width:56px;height:56px;border-radius:9999px;background:#e9d8bd;display:flex;align-items:center;justify-content:center;font-size:28px}.ds-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:20px}.ds-row h3{margin:0;font:700 20px Fraunces,Georgia,serif}.ds-row span{color:#c68642;font-weight:600}.ds-card p{margin:8px 0 0;font-size:14px;color:#7a4a2b}"
+    },
+    {
+      "name": "Testimonial Card", "kind": "card", "refersTo": "quote-card",
+      "description": "Inverted espresso card with a serif quote.",
+      "html": "<figure class=\"ds-quote\"><blockquote>“Best flat white in the neighborhood.”</blockquote><figcaption><b>Maya R.</b><span>Regular</span></figcaption></figure>",
+      "css": ".ds-quote{margin:0;background:#2b1810;color:#faf4ea;border-radius:16px;padding:32px;font-family:Inter,system-ui,sans-serif}.ds-quote blockquote{margin:0;font:500 18px/1.6 Fraunces,Georgia,serif}.ds-quote figcaption{margin-top:24px;font-size:14px}.ds-quote span{display:block;color:rgba(233,216,189,.8)}"
+    },
+    {
+      "name": "Navigation", "kind": "nav", "refersTo": "button-primary",
+      "description": "Sticky blurred cream bar with serif wordmark, links and pill CTA.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-mark\" href=\"#\">Ember &amp; Bean</a><nav><a href=\"#\">Menu</a><a href=\"#\">About</a><a href=\"#\">Visit</a></nav><a class=\"ds-cta\" href=\"#\">Order now</a></header>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:40px;padding:16px 24px;background:rgba(250,244,234,.9);border-bottom:1px solid rgba(233,216,189,.7);color:#2b1810;font-family:Inter,system-ui,sans-serif}.ds-mark{font:700 20px Fraunces,Georgia,serif;color:inherit;text-decoration:none}.ds-nav nav{display:flex;gap:32px;flex:1}.ds-nav nav a{font-size:14px;font-weight:500;color:inherit;text-decoration:none;transition:color .15s}.ds-nav nav a:hover{color:#c68642}.ds-cta{background:#2b1810;color:#faf4ea;padding:8px 20px;border-radius:9999px;font-size:14px;font-weight:500;text-decoration:none;transition:background-color .15s}.ds-cta:hover{background:#7a4a2b}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Corner Table",
+    "overview": "The site should feel like the seat the shop saves for you: warm, unhurried, and a little worn-in. Cream paper carries the reading, espresso brown carries the weight, and caramel is the small glint of something freshly poured. Everything is soft: pill buttons, rounded cards, a serif with gentle personality.",
+    "keyCharacteristics": [
+      "Five-color brown-and-cream palette; no cool neutrals, no pure black or white.",
+      "Serif display (Fraunces) over a neutral sans (Inter) for all functional text.",
+      "Pill-shaped actions, 16px cards, hairline latte borders.",
+      "Flat, tonal depth; shadow only as a response or on the single hero medallion.",
+      "Alternating cream and latte bands, with espresso reserved for the hero, quotes, and footer."
+    ],
+    "rules": [
+      {"name": "The Warm Only Rule", "body": "Every neutral is tinted brown. Never introduce gray, pure black (#000), or pure white as a solid; the white card fill is always translucent (60%) over cream.", "section": "colors"},
+      {"name": "The Glint Rule", "body": "Caramel marks a small thing worth noticing (a price, a label, a number). It is not a section background and not body text; keep it to large or bold text and verify AA before using it for small copy.", "section": "colors"},
+      {"name": "The Serif Speaks Rule", "body": "Only headings and testimonial quotes use Fraunces. Prices, nav, buttons, and hours are always Inter.", "section": "typography"},
+      {"name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows appear on hover, or on the hero medallion, and nowhere else.", "section": "elevation"}
+    ],
+    "dos": [
+      "Do build from the five palette colors; use espresso for text, mocha for secondary text, caramel as the accent.",
+      "Do keep action shapes pill-round and containers 16px.",
+      "Do alternate cream and latte/50 bands between sections.",
+      "Do keep eyebrows uppercase, tracked at 0.1em, and caramel.",
+      "Do keep prices, hours, and address as plain Inter text a phone can read at a glance."
+    ],
+    "donts": [
+      "Don't use pure black, pure white, or any gray.",
+      "Don't put Fraunces on prices, buttons, nav, or form-like data.",
+      "Don't add resting shadows to cards or buttons.",
+      "Don't use caramel for small body text on cream without checking AA contrast.",
+      "Don't add dark borders or square corners.",
+      "Don't treat emoji as final art; they are placeholders for real imagery."
+    ]
+  }
+}

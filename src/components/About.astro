@@ -3,31 +3,25 @@ import SectionHeading from './SectionHeading.astro';
 
 const stats = [
   { value: '12', label: 'partner farms' },
-  { value: '48h', label: 'max days from roast to cup' },
+  { value: '48h', label: 'max from roast to cup' },
   { value: '2019', label: 'serving the neighborhood' },
 ];
 ---
 
 <section id="about" class="scroll-mt-20 bg-latte/50">
-  <div class="mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-2">
-    <div class="flex aspect-square items-center justify-center rounded-3xl bg-gradient-to-br from-mocha to-espresso text-9xl" aria-hidden="true">
-      🫘
-    </div>
-    <div>
-      <SectionHeading
-        align="left"
-        eyebrow="Our story"
-        title="Coffee with a known address"
-        description="We started as a tiny cart with one grinder and a stubborn belief that a good cup should come with a good story. Today we roast in small batches, buy directly from growers, and bake everything in-house."
-      />
-      <dl class="mt-10 grid grid-cols-3 gap-6">
-        {stats.map((stat) => (
-          <div>
-            <dt class="font-display text-3xl font-bold text-caramel">{stat.value}</dt>
-            <dd class="mt-1 text-xs text-mocha">{stat.label}</dd>
-          </div>
-        ))}
-      </dl>
-    </div>
+  <div class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <SectionHeading
+      align="left"
+      title="Coffee with a known address"
+      description="We started as a tiny cart with one grinder and a stubborn belief that a good cup should come with a good story. Today we roast in small batches, buy directly from growers, and bake everything in-house."
+    />
+    <dl class="mt-12 grid max-w-2xl grid-cols-3 gap-6 border-t border-mocha/20 pt-8">
+      {stats.map((stat) => (
+        <div>
+          <dt class="font-display text-2xl font-bold tabular-nums md:text-3xl">{stat.value}</dt>
+          <dd class="mt-1 text-sm text-mocha">{stat.label}</dd>
+        </div>
+      ))}
+    </dl>
   </div>
 </section>

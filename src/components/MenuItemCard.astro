@@ -9,13 +9,10 @@ interface Props {
 const { item } = Astro.props;
 ---
 
-<article class="flex flex-col rounded-2xl border border-latte bg-white/60 p-6 transition-shadow hover:shadow-lg">
-  <div class="flex size-14 items-center justify-center rounded-full bg-latte text-3xl" aria-hidden="true">
-    {item.emoji}
-  </div>
-  <div class="mt-5 flex items-baseline justify-between gap-3">
+<article class="border-b border-latte py-5">
+  <div class="flex items-baseline justify-between gap-4">
     <h3 class="text-xl font-bold">{item.name}</h3>
-    <span class="font-semibold text-caramel">{formatPrice(item.price)}</span>
+    <span class="font-semibold tabular-nums text-mocha">{formatPrice(item.price)}</span>
   </div>
-  <p class="mt-2 text-sm text-mocha">{item.description}</p>
+  <p class="mt-1 max-w-prose text-mocha">{item.description}</p>
 </article>
